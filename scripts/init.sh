@@ -1,6 +1,7 @@
 #!/bin/bash
 
 echo "downloading kafka...$KAFKA_VERSION"
+su -c "yum -y install wget"
 
 #download kafka binaries if not present
 if [ ! -f  $KAFKA_TARGET/$KAFKA_NAME.tgz ]; then
